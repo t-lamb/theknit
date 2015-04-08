@@ -6,13 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'theKnit.net' });
 });
 
-/* GET Hello World page. */
-router.get('/helloworld', function(req, res, next) {
-  res.render('helloworld', { title: 'Hello,World!' });
-});
-
 /* GET Patternlist page. */
-router.get('/patternlist', function(req, res, next) {
+router.get('/index', function(req, res, next) {
     //get db object
     var db = req.db;
     //tell app which collection to look at

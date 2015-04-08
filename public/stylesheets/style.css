@@ -48,19 +48,40 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* --------END RESETS--------- */
-
-body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+button {
+	/*border: none;*/
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	outline: none;
+	position: relative;
+	text-align: center;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
+/* --------END RESETS--------- */
+
+@font-face {
+	font-family:Monoxil;
+	src: url('fonts/Monoxil_Regular.otf') format('otf');
+}
+body {
+  	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	color: #242424;
+}
 h1 {
-	font-size: 1.5rem;
+	color: #cc33ff;
+	font-size: 2rem;
+	font-weight: bold;
 }
 h2 {
 	font-size: 2rem;
 }
-
+h3 {
+	font-size: 1.5rem;
+}
 a {
   color: #00B7FF;
   text-decoration: none;
@@ -79,7 +100,6 @@ header {
 .logo {
 	float: left;
 	padding: 1rem;
-	font-size: 1.5rem;
 }
 .navlink {
 	float: right;
