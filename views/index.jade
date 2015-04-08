@@ -1,5 +1,9 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    include header
+    .container
+        .intro
+            h2. 
+                Let's turn that lovely yarn stash into some hand-knit greatness.
+        include patternlist
