@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET Patternlist page. */
-router.get('/index', function(req, res, next) {
+router.get('/patternlist', function(req, res, next) {
     //get db object
     var db = req.db;
     //tell app which collection to look at

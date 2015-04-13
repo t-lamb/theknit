@@ -6,9 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 // add db
-var mongo = require('mongodb');
-var monk = require('monk');
-var db = monk('localhost:27017/nodetest1')
+var mongo = require('mongoskin');
+var db = mongo.db('mongodb://localhost:27017/nodetest1', {native_parser:true});
 
 
 var routes = require('./routes/index');
