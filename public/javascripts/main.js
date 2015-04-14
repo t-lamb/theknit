@@ -12,13 +12,14 @@ function init() {
 	function show(){	
 		plus.classList.add('hidden');
 		minus.classList.remove('hidden');
+		expand.classList.remove('hidden');
 	}
 
 	function hide(){
 		plus.classList.remove('hidden');
 		minus.classList.add('hidden');
+		expand.classList.add('hidden');
 	}
-
 
 };
 
