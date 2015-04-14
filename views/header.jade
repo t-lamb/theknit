@@ -2,6 +2,10 @@ header
     h1.logo
         a(href="/index") Knitten
     .navlink
-        img(src="/images/add.svg", alt="+")
-        #add-box
-            button Add a New Pattern
+        a(href="#").plus 
+            img(src="/images/plus.svg", alt="+")
+        a(href="#").minus.hidden
+            img(src="/images/minus.svg", alt="-")
+    .add-box.expand.hidden
+        a(href="#").button Add a New Pattern
+        a(href="#").button Start a New Project
