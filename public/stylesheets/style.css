@@ -90,9 +90,13 @@ h3 {
 }
 .container {
 	width: 100%;
-	margin: 0 auto;
+	margin: 3.5rem auto;
 	padding: 0;
 	z-index: 1;
+}
+.main {
+	padding: 1rem;
+	margin: 0 auto;
 }
 .button {
 	padding: 1rem;
@@ -153,19 +157,25 @@ header a{
 	color: #ffffff;
 }
 
+
 /*-------INDEX-------*/
 .intro {
 	text-align: center;
 	width: 100%;
-	margin: 3.5rem auto 1rem;
+	margin: 0 auto;
 	padding: 2rem 1rem 3rem;
 	background-color: #ebf2f2;
 }
 .patternfeed {
-	padding: 0 1rem;
-	margin: 0 auto;
+
 }
 
+/*--------NEW PATTERN---------*/
+form {
+	padding:1rem;
+}
+
+/*--------MEDIA QUERIES--------*/
 @media screen and (min-width: 612px){
 	.add-box {
 		padding: 0 1rem 0;
