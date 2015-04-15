@@ -102,6 +102,9 @@ h3 {
 	padding: 1rem;
 	font-family: Monoxil, monospace;
 }
+.plus, .minus {
+	display: inline-block;
+}
 .hidden {
 	display: none;
 }
@@ -156,7 +159,6 @@ header a{
 	background-color: #cc33ff;
 	color: #ffffff;
 }
-
 
 /*-------INDEX-------*/
 .intro {
