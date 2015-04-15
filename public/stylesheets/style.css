@@ -99,8 +99,20 @@ h3 {
 	margin: 0 auto;
 }
 .button {
+	width: 100%;
+	display: inline-block;
+	margin: 0 0 1rem;
 	padding: 1rem;
+	background-color: #ffffff;
+	color: #cc33ff;
+	border: 2px solid #cc33ff;
 	font-family: Monoxil, monospace;
+	font-size: 1.25rem;
+	text-align: center;
+}
+.button:hover {
+	background-color: #cc33ff;
+	color: #ffffff;
 }
 .plus, .minus {
 	display: inline-block;
@@ -145,20 +157,6 @@ header a{
 	padding: 1rem 1rem 0;
 	border-bottom: 3px solid #cccccc;
 }
-.add-box .button {
-	background-color: #ffffff;
-	color: #cc33ff;
-	border: 2px solid #cc33ff;
-	width: 100%;
-	display: inline-block;
-	font-size: 1.25rem;
-	text-align: center;
-	margin: 0 0 1rem;
-}
-.add-box .button:hover {
-	background-color: #cc33ff;
-	color: #ffffff;
-}
 
 /*-------INDEX-------*/
 .intro {
@@ -174,7 +172,24 @@ header a{
 
 /*--------NEW PATTERN---------*/
 form {
-	padding:1rem;
+	padding:1rem 1rem 1rem 0;
+}
+.formtoggle  {
+	width: 1rem;
+}
+form li{
+	padding: 0 0 1rem;
+}
+label {
+	padding: 0 1rem 0 0;
+}
+input, textarea{
+	width: 99%;
+	margin: .5rem 0 0;
+	padding: .5rem;
+	font-family: inherit;
+	font-size: inherit;
+	border: 1px solid #dddddd;
 }
 
 /*--------MEDIA QUERIES--------*/

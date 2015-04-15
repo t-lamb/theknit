@@ -23,7 +23,7 @@ router.get('/patternlist', function(req, res, next) {
 
 /* GET New Pattern page. */
 router.get('/newpattern', function(req,res) {
-    res.render('newpattern', { title: 'Add New Pattern' });
+    res.render('newpattern', { title: 'Add a New Pattern' });
 });
 
 /*POST to Add Pattern Service */

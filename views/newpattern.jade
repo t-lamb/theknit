@@ -9,35 +9,42 @@ block content
                 ul
                     li
                         label Pattern Name
-                        input(type="text", placeholder="pattern name", name="name")
+                        input(type="text", placeholder=" ", name="name")
                     li
-                        label Type
-                        input(type="text", placeholder="pattern type", name="type")
+                        label Type of Item
+                        input(type="text", placeholder="ex: socks", name="type")
                     li
-                        label Yarn 
+                        label Choose Yarn 
                         a(href="#").plus 
-                            img(src="/images/plus.svg", alt="+")
+                            img(src="/images/plus.svg", alt="+").formtoggle
                         a(href="#").minus.hidden
-                            img(src="/images/minus.svg", alt="-")
-                    li
-                        label Yarn
-                        select(name="yarnweight")
-                            option(value="2") Lace / 2 ply
-                            option(value="4") Fingering / 4ply
-                            option(value="5") Sport / 5ply
-                            option(value="8") DK / 8ply
-                            option(value="10") Worsted / 10ply
-                            option(value="12") Bulky / 12ply
+                            img(src="/images/minus.svg", alt="-").formtoggle
+                        .expand.hidden
+                            select(name="yarnweight")
+                                option(value="2") Lace / 2 ply
+                                option(value="4") Fingering / 4ply
+                                option(value="5") Sport / 5ply
+                                option(value="8") DK / 8ply
+                                option(value="10") Worsted / 10ply
+                                option(value="12") Bulky / 12ply
                     li  
-                        label Needles
-                        select(name="needlesize")
-                            option(value="3.75") US 5 / 3.75mm
-                            option(value="4") US 6 / 4mm
-                            option(value="4.5") US 7 / 4.5mm
-                            option(value="5") US 8 / 5mm
-                            option(value="5.5") US 9 / 5.5mm
-                            option(value="6") US 10 / 6mm
-                            option(value="8") US 11 / 8mm
-                            option(value="9") US 13 / 9mm
+                        label Choose Needles
+                        a(href="#").plus 
+                            img(src="/images/plus.svg", alt="+").formtoggle
+                        a(href="#").minus.hidden
+                            img(src="/images/minus.svg", alt="-").formtoggle
+                        .expand.hidden
+                            select(name="needlesize")
+                                option(value="3.75") US 5 / 3.75mm
+                                option(value="4") US 6 / 4mm
+                                option(value="4.5") US 7 / 4.5mm
+                                option(value="5") US 8 / 5mm
+                                option(value="5.5") US 9 / 5.5mm
+                                option(value="6") US 10 / 6mm
+                                option(value="8") US 11 / 8mm
+                                option(value="9") US 13 / 9mm
+                    li
+                        label Pattern Instructions
+                        textarea(rows="10")
 
                 button.button(type="submit") submit

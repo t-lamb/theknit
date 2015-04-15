@@ -1,3 +1,8 @@
-ul
-    each pattern, i in patternlist
-        li= pattern.name + ' : ' + pattern.type
+extends layout
+
+block content
+    h1.
+        Patterns
+    ul
+        each pattern, i in patternlist
+            li= pattern.name + ' : ' + pattern.type
