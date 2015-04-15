@@ -183,13 +183,17 @@ form li{
 label {
 	padding: 0 1rem 0 0;
 }
-input, textarea{
+input, textarea {
 	width: 99%;
 	margin: .5rem 0 0;
-	padding: .5rem;
+	padding: .5rem .5rem .7rem;
 	font-family: inherit;
 	font-size: inherit;
 	border: 1px solid #dddddd;
+}
+.hint {
+	font-size: .8rem;
+	color: #aaaaaa;
 }
 
 /*--------MEDIA QUERIES--------*/

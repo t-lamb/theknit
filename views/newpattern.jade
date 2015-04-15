@@ -5,6 +5,7 @@ block content
     .container
         .main
             h1= title
+            p Add a knitting pattern to our library and you'll be able to access it from anywhere.
             form(name="addpattern", method="post", action="/addpattern")
                 ul
                     li
@@ -13,6 +14,22 @@ block content
                     li
                         label Type of Item
                         input(type="text", placeholder="ex: socks", name="type")
+                    //-li
+                        label Choose Yarn 
+                        a(href="#").plus 
+                            img(src="/images/plus.svg", alt="+").formtoggle
+                        a(href="#").minus.hidden
+                            img(src="/images/minus.svg", alt="-").formtoggle
+                        .expand.hidden
+                            input(type="radio" name="yarnweight")
+                                svg#y2(version="1.1" x="0px" y="0px" width="150px" height="5px" viewBox="0 0 150 5")
+                                    g(transform="scale(1 .05)")
+                                        path (d="M60,6.1C58.7,1.6,53.9-1,49.3,0.3c-4.5,1.4-7.1,6.1-5.8,10.7l24.8,82.9c1.4,4.5,6.1,7.1,10.7,5.8c4.5-1.4,7.1-6.1,5.8-10.7L60,6.1z")
+                                        path (d="M38.4,6.1C37,1.6,32.3-1,27.7,0.3C23.2,1.7,20.6,6.5,22,11l24.8,82.9c1.4,4.5,6.1,7.1,10.7,5.8c4.5-1.4,7.1-6.1,5.8-10.7L38.4,6.1z")
+                                        path (d="M103.3,6.1c-1.4-4.5-6.1-7.1-10.7-5.8c-4.5,1.4-7.1,6.1-5.8,10.7l24.8,82.9c1.4,4.5,6.1,7.1,10.7,5.8c4.5-1.4,7.1-6.1,5.8-10.7L103.3,6.1z")
+                                        path (d="M81.6,6.1C80.3,1.6,75.5-1,71,0.3c-4.5,1.4-7.1,6.1-5.8,10.7L90,93.9c1.4,4.5,6.1,7.1,10.7,5.8c4.5-1.4,7.1-6.1,5.8-10.7L81.6,6.1z")
+                                        path (d="M114.5,0c-4.5,1.4-7.4,6.5-6.1,11l24.8,82.9c1.4,4.5,6.1,7.1,10.7,5.8c4.5-1.4,6.1-5.4,6.1-10.7V0H114.5z")
+                                        path (d="M16.8,6.1C15.4,1.6,10.6-1,6.1,0.3C1.6,1.7,0,5.7,0,11v89h35.5c4.5-1.4,7.4-6.5,6.1-11L16.8,6.1z")
                     li
                         label Choose Yarn 
                         a(href="#").plus 
@@ -43,8 +60,20 @@ block content
                                 option(value="6") US 10 / 6mm
                                 option(value="8") US 11 / 8mm
                                 option(value="9") US 13 / 9mm
+                            select(name="needletype")
+                                option(value="straight") Straight
+                                option(value="circular") Circular
+                                option(value="dpn") DPN
                     li
                         label Pattern Instructions
                         textarea(rows="10")
-
-                button.button(type="submit") submit
+                    li
+                        label Author or Source name
+                        p.hint Please give credit
+                        input(type="text", placeholder=" ", name="source")
+                        input(type="checkbox", name="self")
+                        |I wrote this pattern
+                    li
+                        label Link to Source
+                        input(type="text", placeholder="Paste the URL here", name="sourceurl")
+                button.button(type="submit") Save
