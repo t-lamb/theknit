@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
+// location of db model
+var Model = require("../models/model.js");
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'theKnit.net' });
@@ -34,12 +37,24 @@ router.post('/addpattern', function(req,res) {
     //these rely on "name" attribute 
     var patternName = req.body.name;
     var patternType = req.body.type;
+    var patternNeedleSize = req.body.needlesize;
+    var patternNeedleType = req.body.needletype;
+    var patternYarnWeight = req.body.yarnweight;
+    var patternSourceName = req.body.sourcename;
+    var patternSourceUrl = req.body.sourceurl;
     //tell app which collection to look at
     var collection = db.get('patterncollection');
     //add to the db
     collection.insert({
         "name" : patternName,
-        "type" : patternType
+        "type" : patternType,
+        "needles": { 
+            "type": patternNeedleType, 
+            "size": patternNeedleSize 
+        },
+        "yarnweight": yarnWeight,
+        "sourcename": sourceName,
+        "sourceurl" : sourceUrl
     }, function (err, doc) {
         if (err) {
             //if it failed, return error

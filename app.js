@@ -1,4 +1,5 @@
 var express = require('express');
+var app = express();
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -6,14 +7,25 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 // add db
-var mongo = require('mongoskin');
-var db = mongo.db('mongodb://localhost:27017/nodetest1', {native_parser:true});
+var mongo = require('mongo');
+var mongoose = require('mongoose');
+var mongodbUri = require('mongodb-uri');
 
+var url = "mongodb://heroku_app35915786:8joe933p7suao3dup0ft8a513c@ds031721.mongolab.com:31721/heroku_app35915786?replicaSet=rs-ds031721"
+var mongoUrl = mongodbUri.formatMongoose(url);
 
+mongoose.connect(mongoUrl);
+var db = mongoose.connection;
+db.on('error', function(error){
+  console.log('db error:', error);
+});
+db.on('open', function(){
+  console.log('db is open');
+});
+
+//connect to index.js
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
