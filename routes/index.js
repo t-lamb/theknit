@@ -32,15 +32,13 @@ router.post('/addpattern', function(req,res) {
     //get form values
     //these rely on "name" attribute 
     //create newPattern object with model from model.js
-    var needles = {
-            size: req.body.needlesize,
-            type: req.body.needletype
-        };
-
     var newPattern = new Model.Pattern();
         newPattern.name = req.body.name;
         newPattern.type = req.body.type;
-        newPattern.needles = needles;
+        newPattern.needles = {
+            size: req.body.needlesize,
+            type: req.body.needletype
+        };
         newPattern.yarnweight = req.body.yarnweight;
         newPattern.instructions = req.body.instructions;
         newPattern.sourcename = req.body.sourcename;

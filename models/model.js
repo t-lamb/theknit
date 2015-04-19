@@ -8,7 +8,7 @@ var patternSchema = new Schema({
   	name: String,
   	type: String,
   	needles: { 
-		type: String, 
+		type: {type: String}, 
 		size: String // '5 millimeter' 
 	},
   	yarnweight: String,
