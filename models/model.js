@@ -13,7 +13,7 @@ var patternSchema = new Schema({
 	},
   	yarnweight: String,
 	instructions: String,
-	sourcename, String,
+	sourcename: String,
 	sourceurl: String
 	//projects: [{type:Schema.ObjectId, ref:'Project'}]
 });

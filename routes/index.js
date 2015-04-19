@@ -10,15 +10,12 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET Patternlist page. */
-router.get('/patternlist', function(req, res, next) {
-    //get db object
-    var db = req.db;
-    //tell app which collection to look at
-    var collection = db.get('patterncollection');
-    //do a find in this collection
-    //return results as the variable 'docs'
-    collection.find({},{},function(e,docs) {
+router.get('/allPatterns', function(req, res, next) {
+    //finding all patterns as var "docs"
+    Model.Pattern.find(function(e,docs) {
+        //renders patternlist.jade with json object
         res.render('patternlist', {
+            //paternlist is available to patternlist.jade
             "patternlist" : docs
         });
     });
@@ -29,42 +26,54 @@ router.get('/newpattern', function(req,res) {
     res.render('newpattern', { title: 'Add a New Pattern' });
 });
 
-/*POST to Add Pattern Service */
+/* POST to Add Pattern Service */
 router.post('/addpattern', function(req,res) {
-    //get db object
-    var db = req.db;
+    console.log(req.body);
     //get form values
     //these rely on "name" attribute 
-    var patternName = req.body.name;
-    var patternType = req.body.type;
-    var patternNeedleSize = req.body.needlesize;
-    var patternNeedleType = req.body.needletype;
-    var patternYarnWeight = req.body.yarnweight;
-    var patternSourceName = req.body.sourcename;
-    var patternSourceUrl = req.body.sourceurl;
-    //tell app which collection to look at
-    var collection = db.get('patterncollection');
-    //add to the db
-    collection.insert({
-        "name" : patternName,
-        "type" : patternType,
-        "needles": { 
-            "type": patternNeedleType, 
-            "size": patternNeedleSize 
-        },
-        "yarnweight": yarnWeight,
-        "sourcename": sourceName,
-        "sourceurl" : sourceUrl
-    }, function (err, doc) {
+    //create newPattern object with model from model.js
+    var needles = {
+            size: req.body.needlesize,
+            type: req.body.needletype
+        };
+
+    var newPattern = new Model.Pattern();
+        newPattern.name = req.body.name;
+        newPattern.type = req.body.type;
+        newPattern.needles = needles;
+        newPattern.yarnweight = req.body.yarnweight;
+        newPattern.instructions = req.body.instructions;
+        newPattern.sourcename = req.body.sourcename;
+        newPattern.sourceurl = req.body.sourceurl;
+    //add newPattern object to the db
+    newPattern.save(function (err, doc) {
         if (err) {
             //if it failed, return error
             res.send("There was a problem adding the info to the database.");
         }
         else {
             //if it worked, set the header set the address bar
-            res.location("patternlist");
+            res.location("/patterns/"+doc.id);
             //forward to success page
-            res.redirect("patternlist");
+            res.redirect("/patterns/"+doc.id);
+        }
+    });
+});
+
+/* GET Pattern page. */
+router.get('/patterns/:patternid', function(req, res, next) {
+    //finding all patterns as var "docs"
+    Model.Pattern.findById(req.params.patternid,function(err, docs) {
+        if (err) {
+            //if it failed, return error
+            res.send("This id could not be found.");
+        }
+        else {
+            //renders patternlist.jade with json object 
+            res.render('patternpage', {
+            //paternlist is available to patternlist.jade
+                "pattern" : docs
+            });
         }
     });
 });

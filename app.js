@@ -2,8 +2,6 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 // add db
@@ -11,7 +9,7 @@ var mongo = require('mongo');
 var mongoose = require('mongoose');
 var mongodbUri = require('mongodb-uri');
 
-var url = "mongodb://heroku_app35915786:8joe933p7suao3dup0ft8a513c@ds031721.mongolab.com:31721/heroku_app35915786?replicaSet=rs-ds031721"
+var url = "mongodb://heroku_app36019089:e1gm3it25dp8vfm1qr7a4gvul9@ds061651.mongolab.com:61651/heroku_app36019089"
 var mongoUrl = mongodbUri.formatMongoose(url);
 
 mongoose.connect(mongoUrl);
@@ -33,10 +31,8 @@ app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
-app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Make db accessible to router

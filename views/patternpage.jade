@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1= pattern.name
+    ul
+        li#type= pattern.type
+        li#needlesize= pattern.needles.size
+        li#needletype= pattern.needles.type
+        li#yarnweight= pattern.yarnweight
+        li#instructions= pattern.instructions
+        li#sourcename= pattern.sourcename
+        li#sourceurl= pattern.sourceurl
