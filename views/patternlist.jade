@@ -5,4 +5,5 @@ block content
         Patterns
     ul
         each patternObj, i in patternlist
-            li= patternObj.name + ' : ' + patternObj.type + ", " + patternObj.needlesize
+            li
+                a(href="/patterns/"+patternObj.id)= patternObj.name

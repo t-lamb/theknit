@@ -12,6 +12,15 @@ block content
                         label Pattern Name
                         input(type="text", placeholder=" ", name="name")
                     li
+                        label Author or Source name
+                        p.hint Please give credit
+                        input(type="text", placeholder=" ", name="sourcename")
+                        //-input(type="checkbox", name="self")
+                        //-| I wrote this pattern
+                    li
+                        label Link to Source
+                        input(type="text", placeholder="Paste the URL here", name="sourceurl")
+                    li
                         label Type of Item
                         input(type="text", placeholder="ex: socks", name="type")
                     //-li
@@ -31,10 +40,11 @@ block content
                                         path (d="M114.5,0c-4.5,1.4-7.4,6.5-6.1,11l24.8,82.9c1.4,4.5,6.1,7.1,10.7,5.8c4.5-1.4,6.1-5.4,6.1-10.7V0H114.5z")
                                         path (d="M16.8,6.1C15.4,1.6,10.6-1,6.1,0.3C1.6,1.7,0,5.7,0,11v89h35.5c4.5-1.4,7.4-6.5,6.1-11L16.8,6.1z")
                     li
-                        label Choose Yarn 
                         a(href="#").plus 
+                            label Choose Yarn 
                             img(src="/images/plus.svg", alt="+").formtoggle
                         a(href="#").minus.hidden
+                            label Choose Yarn 
                             img(src="/images/minus.svg", alt="-").formtoggle
                         .expand.hidden
                             select(name="yarnweight")
@@ -45,10 +55,11 @@ block content
                                 option(value="Worsted / 10ply") Worsted / 10ply
                                 option(value="Bulky / 12ply") Bulky / 12ply
                     li  
-                        label Choose Needles
-                        a(href="#").plus 
+                        a(href="#").plus
+                            label Choose Needles 
                             img(src="/images/plus.svg", alt="+").formtoggle
                         a(href="#").minus.hidden
+                            label Choose Needles 
                             img(src="/images/minus.svg", alt="-").formtoggle
                         .expand.hidden
                             select(name="needlesize")
@@ -67,13 +78,4 @@ block content
                     li
                         label Pattern Instructions
                         textarea(name="instructions", cols="30", rows="10")
-                    li
-                        label Author or Source name
-                        p.hint Please give credit
-                        input(type="text", placeholder=" ", name="sourcename")
-                        //-input(type="checkbox", name="self")
-                        //-| I wrote this pattern
-                    li
-                        label Link to Source
-                        input(type="text", placeholder="Paste the URL here", name="sourceurl")
                 button.button(type="submit") Save

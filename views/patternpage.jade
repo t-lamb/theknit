@@ -6,6 +6,9 @@ block content
         .main.patternpage
             h1= pattern.name
             ul
+                li 
+                    label Pattern source: 
+                    a(href="mailto:#{pattern.sourceurl}")= pattern.sourcename 
                 li
                     label Type of Item:
                     =pattern.type
@@ -15,6 +18,6 @@ block content
                 li  
                     label Yarn Weight:
                     =pattern.yarnweight+" ply"
-                li#instructions= pattern.instructions
-                li#sourcename= pattern.sourcename
-                li#sourceurl= pattern.sourceurl
+                li
+                    label Pattern Instructions
+                    =pattern.instructions
