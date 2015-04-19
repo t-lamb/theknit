@@ -6,7 +6,13 @@ var Model = require("../models/model.js");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'theKnit.net' });
+      Model.Pattern.find(function(e,docs) {
+        //renders patternlist.jade with json object
+  res.render('index', { 
+            title: 'theKnit.net',
+             "patternlist" : docs
+        });
+    });
 });
 
 /* GET Patternlist page. */
