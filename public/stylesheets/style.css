@@ -184,7 +184,7 @@ form li{
 label {
 	padding: 0 1rem 0 0;
 }
-input[type="text"], textarea {
+input[type=text], textarea {
 	width: 99%;
 	margin: .5rem 0 0;
 	padding: .5rem .5rem .7rem;
@@ -192,15 +192,31 @@ input[type="text"], textarea {
 	font-size: inherit;
 	border: 1px solid #dddddd;
 }
-input[type="radio"] {
+input[type=radio] {
 	visibility: hidden;
 	float: right;
+}
+.yarn label:hover {
+	color: #ff6666;
+	background-color: #ecffcf;
+	cursor: pointer;
+}
+.needle label:hover {
+	color: #ff6666;
+	background-color: #ecffcf;
+	cursor: pointer;
+}
+input[type=radio]:checked + label{
+	color: #ff6666;
+	background-color: #ecffcf;
+	font-weight: bold;
 }
 .hint {
 	font-size: .8rem;
 	color: #aaaaaa;
 }
-.yarn {
+.radiolist {
+	padding: 1rem 0 0;
 }
 #y2 {
 	height:5px;
@@ -222,8 +238,7 @@ input[type="radio"] {
 }
 #y2, #y4, #y5, #y8, #y10, #y12 {
 	width: 200px;
-}
-.needle {
+	margin: 0 0 .25rem;
 }
 #n5 {
 	height:14px;
@@ -251,6 +266,7 @@ input[type="radio"] {
 }
 #n5, #n6, #n7, #n8, #n9, #n10, #n11, #n13 {
 	width: 200px;
+	margin: 0 0 .25rem;
 }
 
 /*--------MEDIA QUERIES--------*/
