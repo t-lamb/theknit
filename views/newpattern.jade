@@ -34,49 +34,33 @@ block content
                             .yarn
                                 input(type="radio", name="yarnweight", id="yarn2", checked=false, value="Lace / 2ply")
                                 label(for="yarn2")   
-                                    img#y2(src="/images/yarn.svg", alt="+")
-                                    span Lace / 2 ply 
+                                    img#y2(src="/images/yarn-wide.svg", alt="lace weight yarn")
+                                    p Lace / 2 ply 
                             .yarn
                                 input(type="radio", name="yarnweight", id="yarn4", checked=false, value="Fingering / 4ply")    
                                 label(for="yarn4") 
-                                    img#y4(src="/images/yarn.svg", alt="+")
-                                    span Fingering / 4 ply       
+                                    img#y4(src="/images/yarn-wide.svg", alt="fingering weight yarn")
+                                    p Fingering / 4 ply       
                             .yarn
                                 input(type="radio", name="yarnweight", id="yarn5", checked=false, value="Sport / 5ply")
                                 label(for="yarn5")
-                                    img#y5(src="/images/yarn.svg", alt="+")
-                                    span Sport / 5 ply
+                                    img#y5(src="/images/yarn-wide.svg", alt="sport weight yarn")
+                                    p Sport / 5 ply
                             .yarn
                                 input(type="radio", name="yarnweight", id="yarn8", checked=false, value="DK / 8ply")
                                 label(for="yarn8") 
-                                    img#y8(src="/images/yarn.svg", alt="+")
-                                    span DK / 8 ply  
+                                    img#y8(src="/images/yarn-wide.svg", alt="dk weight yarn")
+                                    p DK / 8 ply  
                             .yarn
                                 input(type="radio", name="yarnweight", id="yarn10", checked=false, value="Worsted / 10ply")    
                                 label(for="yarn10") 
-                                    img#y10(src="/images/yarn.svg", alt="+")
-                                    span Worsted / 10 ply
+                                    img#y10(src="/images/yarn-wide.svg", alt="worsted weight yarn")
+                                    p Worsted / 10 ply
                             .yarn
                                 input(type="radio", name="yarnweight", id="yarn12", checked=false, value="Bulky / 12ply")    
                                 label(for="yarn12")
-                                    img#y12(src="/images/yarn.svg", alt="+")
-                                    span Bulky / 12 ply
-                                                
-                    //-li
-                        a(href="#").plus 
-                            label Choose Yarn 
-                            img(src="/images/plus.svg", alt="+").formtoggle
-                        a(href="#").minus.hidden
-                            label Choose Yarn 
-                            img(src="/images/minus.svg", alt="-").formtoggle
-                        .expand.hidden
-                            select(name="yarnweight")
-                                option(value="Lace / 2ply") Lace / 2 ply
-                                option(value="Fingering / 4ply") Fingering / 4ply
-                                option(value="Sport / 5ply") Sport / 5ply
-                                option(value="DK / 8ply") DK / 8ply
-                                option(value="Worsted / 10ply") Worsted / 10ply
-                                option(value="Bulky / 12ply") Bulky / 12ply
+                                    img#y12(src="/images/yarn-wide.svg", alt="bulky weight yarn")
+                                    p Bulky / 12 ply
                     li 
                         a(href="#").plus 
                             label Choose Needles
@@ -85,51 +69,46 @@ block content
                             label Choose Needles
                             img(src="/images/minus.svg", alt="-").formtoggle
                         .expand.hidden
-                            label US 5 / 3.75mm
-                                input(type="radio", name="yarnweight", checked=false, value="US 5 / 3.75mm")
-                                img(src="/images/needle.svg", alt="+") 
-                            label US 6 / 4mm
-                                input(type="radio", name="yarnweight", checked=false, value="US 6 / 4mm")
-                                img(src="/images/needle.svg", alt="+")
-                            label US 7 / 4.5mm
-                                input(type="radio", name="yarnweight", checked=false, value="US 7 / 4.5mm")
-                                img(src="/images/needle.svg", alt="+")
-                            label US 8 / 5mm   
-                                input(type="radio", name="yarnweight", checked=false, value="US 8 / 5mm")
-                                img(src="/images/needle.svg", alt="+")
-                            label US 9 / 5.5mm
-                                input(type="radio", name="yarnweight", checked=false, value="US 9 / 5.5mm")
-                                img(src="/images/needle.svg", alt="+")
-                            label US 10 / 6mm
-                                input(type="radio", name="yarnweight", checked=false, value="US 10 / 6mm")
-                                img(src="/images/needle.svg", alt="+")  
-                            label US 11 / 8mm
-                                input(type="radio", name="yarnweight", checked=false, value="US 11 / 8mm")
-                                img(src="/images/needle.svg", alt="+") 
-                            label US 13 / 9mm
-                                input(type="radio", name="yarnweight", checked=false, value="US 13 / 9mm")
-                                img(src="/images/needle.svg", alt="+") 
-                    //-li  
-                        a(href="#").plus
-                            label Choose Needles 
-                            img(src="/images/plus.svg", alt="+").formtoggle
-                        a(href="#").minus.hidden
-                            label Choose Needles 
-                            img(src="/images/minus.svg", alt="-").formtoggle
-                        .expand.hidden
-                            select(name="needlesize")
-                                option(value="US 5 / 3.75mm") US 5 / 3.75mm
-                                option(value="US 6 / 4mm") US 6 / 4mm
-                                option(value="US 7 / 4.5mm") US 7 / 4.5mm
-                                option(value="US 8 / 5mm") US 8 / 5mm
-                                option(value="US 9 / 5.5mm") US 9 / 5.5mm
-                                option(value="US 10 / 6mm") US 10 / 6mm
-                                option(value="US 11 / 8mm") US 11 / 8mm
-                                option(value="US 13 / 9mm") US 13 / 9mm
-                            select(name="needletype")
-                                option(value="Straight") Straight
-                                option(value="Circular") Circular
-                                option(value="Double-Pointed") Double-Pointed
+                            .needle
+                                input(type="radio", name="needlesize", id="needle5", checked=false, value="US 5 / 3.75mm")
+                                label(for="needle5")
+                                    img#n5(src="/images/needle.svg", alt="size 5 needles")
+                                    p US 5 / 3.75mm
+                            .needle
+                                input(type="radio", name="needlesize", id="needle6", checked=false, value="US 6 / 4mm")
+                                label(for="needle6")
+                                    img#n6(src="/images/needle.svg", alt="size 6 needles")
+                                    p US 6 / 4mm
+                            .needle
+                                input(type="radio", name="needlesize", id="needle7", checked=false, value="US 7 / 4.5mm")
+                                label(for="needle7")
+                                    img#n7(src="/images/needle.svg", alt="size 7 needles")
+                                    p US 7 / 4.5mm
+                            .needle
+                                input(type="radio", name="needlesize", id="needle8", checked=false, value="US 8 / 5mm")
+                                label(for="needle8")
+                                    img#n8(src="/images/needle.svg", alt="size 8 needles")
+                                    p US 8 / 5mm
+                            .needle
+                                input(type="radio", name="needlesize", id="needle9", checked=false, value="US 9 / 5.5mm")
+                                label(for="needle9")
+                                    img#n9(src="/images/needle.svg", alt="size 9 needles")
+                                    p US 9 / 5.5mm
+                            .needle
+                                input(type="radio", name="needlesize", id="needle10", checked=false, value="US 10 / 6mm")
+                                label(for="needle10")
+                                    img#n10(src="/images/needle.svg", alt="size 10 needles")
+                                    p US 10 / 6mm
+                            .needle
+                                input(type="radio", name="needlesize", id="needle11", checked=false, value="US 11 / 8mm")
+                                label(for="needle11")
+                                    img#n11(src="/images/needle.svg", alt="size 11 needles")
+                                    p US 11 / 8mm 
+                            .needle
+                                input(type="radio", name="needlesize", id="needle13", checked=false, value="US 13 / 9mm")
+                                label(for="needle13")
+                                    img#n13(src="/images/needle.svg", alt="size 13 needles")
+                                    p US 13 / 9mm 
                     li
                         label Pattern Instructions
                         textarea(name="instructions", cols="30", rows="10")
