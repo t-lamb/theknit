@@ -167,7 +167,21 @@ header a{
 	background-color: #ebf2f2;
 }
 .patternfeed {
-
+	display: -webkit-flex; /* Safari */
+	-webkit-flex-wrap: wrap; /* Safari */
+	-webkit-justify-content: space-between; /* Safari */
+  	
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: space-between;
+}
+.patternfeed li {
+	display: inline-block;
+	width: 20rem;
+	padding: 1rem;
+}
+.patternfeed img{
+	max-width: 100%;
 }
 
 /*--------NEW PATTERN---------*/

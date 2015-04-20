@@ -1,7 +1,5 @@
-patternlist
-    h1.
-        Patterns
-    ul
-        each patternObj, i in patternlist
-            li
-                a(href="/patterns/"+patternObj.id)= patternObj.name
+ul.patternlist
+    each patternObj, i in patternlist
+        li  
+            img(src="images/hat.jpg" alt="placeholder image")
+            a(href="/patterns/"+patternObj.id)= patternObj.name
