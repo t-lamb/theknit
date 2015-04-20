@@ -183,7 +183,7 @@ form li{
 label {
 	padding: 0 1rem 0 0;
 }
-input, textarea {
+input[type="text"], textarea {
 	width: 99%;
 	margin: .5rem 0 0;
 	padding: .5rem .5rem .7rem;
@@ -191,9 +191,33 @@ input, textarea {
 	font-size: inherit;
 	border: 1px solid #dddddd;
 }
+input[type="radio"] {
+	visibility: hidden;
+}
 .hint {
 	font-size: .8rem;
 	color: #aaaaaa;
+}
+.yarn {
+	
+}
+#y2 {
+	transform: scale(1, 0.05);
+}
+#y4 {
+	transform: scale(1, 0.09);
+}
+#y5 {
+	transform: scale(1, 0.12);
+}
+#y8 {
+	transform: scale(1, 0.18);
+}
+#y10 {
+	transform: scale(1, 0.24);
+}
+#y12 {
+	transform: scale(1, 0.28);
 }
 
 /*--------MEDIA QUERIES--------*/
