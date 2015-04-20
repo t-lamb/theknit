@@ -174,10 +174,11 @@ header a{
   	display: flex;
   	flex-wrap: wrap;
   	justify-content: space-between;
+  	reversed: reversed;
 }
 .patternfeed li {
 	display: inline-block;
-	width: 20rem;
+	width: 100%;
 	padding: 1rem;
 }
 .patternfeed img{
@@ -291,6 +292,11 @@ input[type=radio]:checked + label{
 	.add-box .button {
 		width: 47%;
 		margin: 1rem 1.5%;
+	}
+	.patternfeed li {
+		display: inline-block;
+		width: 25%;
+		padding: 1rem;
 	}
 }
 @media screen and (min-width: 900px){
