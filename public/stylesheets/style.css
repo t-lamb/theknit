@@ -134,7 +134,7 @@ header {
   	border-bottom: 3px solid #cc33ff;
 }
 header a{
-	color: #444444;
+	color: #222222;
 	font-family: Monoxil, monospace;
 }
 .logo {
@@ -163,18 +163,24 @@ header a{
 	text-align: center;
 	width: 100%;
 	margin: 0 auto;
-	padding: 2rem 1rem 3rem;
+	padding: 3rem 1rem 4rem;
+	background-image: url('../images/yarnscraps1.jpg');
+	background-position: center;
 	background-color: #ebf2f2;
+}
+span {
+	color: #000000;
+	background-color: rgba(236, 255, 207, .8);
+	padding: 0 .3rem .2rem;
+	line-height: 1.4;
 }
 .patternfeed {
 	display: -webkit-flex; /* Safari */
 	-webkit-flex-wrap: wrap; /* Safari */
-	-webkit-justify-content: space-between; /* Safari */
-  	
+	-webkit-justify-content: space-between; /* Safari */  	
   	display: flex;
   	flex-wrap: wrap;
   	justify-content: space-between;
-  	reversed: reversed;
 }
 .patternfeed li {
 	display: inline-block;
@@ -292,6 +298,10 @@ input[type=radio]:checked + label{
 	.add-box .button {
 		width: 47%;
 		margin: 1rem 1.5%;
+	}
+	.intro {
+		padding: 6rem 1rem 7rem;
+
 	}
 	.patternfeed li {
 		display: inline-block;
