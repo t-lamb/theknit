@@ -8,6 +8,10 @@ block content
             p Add a knitting pattern to our library and you'll be able to access it from anywhere.
             form(name="addpattern", method="post", action="/addpattern")
                 ul
+                    //-li
+                        button.button I wrote this pattern
+                    //-li
+                        button.button I found this pattern
                     li
                         label Pattern Name
                         input(type="text", placeholder=" ", name="name")
