@@ -6,9 +6,9 @@ var Model = require("../models/model.js");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-      Model.Pattern.find(function(e,docs) {
+    Model.Pattern.find(function(e,docs) {
         //renders patternlist.jade with json object
-  res.render('index', { 
+    res.render('index', { 
             title: 'theKnit.net',
              "patternlist" : docs
         });

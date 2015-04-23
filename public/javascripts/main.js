@@ -15,7 +15,7 @@ function init() {
 	};
 
 	function show(e){
-		console.log(e.target.parentElement.parentElement.querySelector('.expand'));
+		console.log(e.target.parentElement);
 		e.target.parentElement.classList.add('hidden');
 		e.target.parentElement.nextElementSibling.classList.remove('hidden');
 		e.target.parentElement.parentElement.querySelector('.expand').classList.remove('hidden');
@@ -30,12 +30,15 @@ function init() {
 	var sourceSelf = document.getElementById('source-self');
 		sourceSelf.addEventListener('click',function(){
 			sourceUrl.classList.add('hidden');
+			sourceNameLabel.parentElement.classList.remove('hidden');
 			sourceNameLabel.innerHTML='My Name';
 	});
 
 	var sourceOutside = document.getElementById('source-outside');
 		sourceOutside.addEventListener('click',function(){
 			sourceUrl.classList.remove('hidden');
+			sourceNameLabel.classList.remove('hidden');
+			sourceNameLabel.parentElement.classList.remove('hidden');
 			sourceNameLabel.innerHTML='Author or Source Name';
 	});
 

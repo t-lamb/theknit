@@ -5,12 +5,11 @@ block content
     .container
         .main.patternpage
             h1= pattern.name
-            ul
-                li 
-                    label Pattern source: 
-                    a(href=pattern.sourceurl)= pattern.sourcename 
+            p By 
+                a(href=pattern.sourceurl)= pattern.sourcename 
+            ul                    
                 li
-                    label Type of Item:
+                    label Item:
                     =pattern.type
                 li
                     label Needles:
@@ -18,6 +17,6 @@ block content
                 li  
                     label Yarn Weight:
                     =pattern.yarnweight+" ply"
-                li
-                    label Pattern Instructions
-                    =pattern.instructions
+                
+            label Instructions
+            p=pattern.instructions
