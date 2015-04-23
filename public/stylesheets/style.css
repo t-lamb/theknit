@@ -113,7 +113,7 @@ h3 {
 	color: #444444;
 }
 .main a:hover {
-	color: #ff6666;
+	color: #0099ff;
 }
 .button {
 	width: 100%;
@@ -166,13 +166,13 @@ header a{
 	width: 1.5rem;
 }
 .add-box {
-	background-color: #ffffff;
+	background-color: #ebf2f2;
 	position: absolute;
 	top: 3.5rem;
 	left:0;
 	width: 100%;
 	padding: 1rem 1rem 0;
-	border-bottom: 3px solid #cccccc;
+	border-bottom: 3px solid #c6cdcd;
 }
 
 /*-------INDEX-------*/
@@ -192,14 +192,11 @@ header a{
 	line-height: 1.4;
 }
 .divider {
-	color: #c6cdcd;
+	color: #cc33ff;
 	padding: 0 1rem;
 }
 .tab {
 	color: #c6cdcd;
-}
-.tab:hover {
-	color: #ff6666;
 }
 .tab img {
 	width: 1rem;
@@ -357,5 +354,28 @@ input[type=radio]:checked + label{
 @media screen and (min-width: 1024px){
 	.patternfeed li {
 		width: 25%;
+	}
+	header {
+		height: 4rem;
+	}
+	.logo {
+		padding: .5rem 1rem;
+	}
+	header .plus {
+		display: none;
+	}
+	.add-box {
+		display: block;
+		top: 0;
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		margin: 0;
+	}
+	.add-box .button {
+		padding: .6rem 1rem .4rem;
+		margin: .5rem 1rem 0;
+		font-size: 1.25rem;
+		width: 27%;
 	}
 }
