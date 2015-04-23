@@ -27,6 +27,21 @@ function init() {
 		e.target.parentElement.parentElement.querySelector('.expand').classList.add('hidden');
 	}
 
+	var sourceSelf = document.getElementById('source-self');
+		sourceSelf.addEventListener('click',function(){
+			sourceUrl.classList.add('hidden');
+			sourceNameLabel.innerHTML='My Name';
+	});
+
+	var sourceOutside = document.getElementById('source-outside');
+		sourceOutside.addEventListener('click',function(){
+			sourceUrl.classList.remove('hidden');
+			sourceNameLabel.innerHTML='Author or Source Name';
+	});
+
+	var sourceUrl = document.getElementById('sourceurl');
+	var sourceNameLabel = document.getElementById('sourcename-label');
+
 };
 
 window.addEventListener('load', init);

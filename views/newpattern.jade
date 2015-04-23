@@ -6,24 +6,20 @@ block content
         .main
             h1= title
             p Add a knitting pattern to our library and you'll be able to access it from anywhere.
+            a#source-self(href="#") I wrote this pattern
+            a#source-outside(href="#") I found this pattern
+
             form(name="addpattern", method="post", action="/addpattern")
                 ul
-                    //-li
-                        button.button I wrote this pattern
-                    //-li
-                        button.button I found this pattern
                     li
-                        label Pattern Name
-                        input(type="text", placeholder=" ", name="name")
-                    li
-                        label Author or Source Name
-                        p.hint Please give credit
+                        label#sourcename-label My Name
                         input(type="text", placeholder=" ", name="sourcename")
-                        //-input(type="checkbox", name="self")
-                        //-| I wrote this pattern
-                    li
+                    li#sourceurl.hidden
                         label Link to Source
                         input(type="text", placeholder="Paste the URL here", name="sourceurl")
+                     li
+                        label Pattern Name
+                        input(type="text", placeholder=" ", name="name")
                     li
                         label Type of Item
                         input(type="text", placeholder="ex: socks", name="type")
