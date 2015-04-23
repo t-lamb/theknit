@@ -35,6 +35,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+//use locals from base directory
+app.locals.basedir = path.join(__dirname, 'public');
+
 // Make db accessible to router
 app.use(function(req,res,next){
   req.db = db;

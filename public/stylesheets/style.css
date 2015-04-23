@@ -268,54 +268,52 @@ input[type=radio]:checked + label{
 .radiolist {
 	padding: 1rem 0 0;
 }
-#y2 {
+#y2 svg{
 	height:5px;
 }
-#y4 {
+#y4 svg{
 	height:9px;
 }
-#y5 {
+#y5 svg{
 	height:12px;
 }
-#y8 {
+#y8 svg{
 	height:18px;
 }
-#y10 {
+#y10 svg{
 	height:24px;
 }
-#y12 {
+#y12 svg{
 	height:28px;
 }
-#y2, #y4, #y5, #y8, #y10, #y12 {
-	width: 200px;
-	margin: 0 0 .25rem;
-}
-#n5 {
+#n5 svg{
 	height:14px;
 }
-#n6 {
+#n6 svg{
 	height:15px;
 }
-#n7 {
+#n7 svg{
 	height:17px;
 }
-#n8 {
+#n8 svg{
 	height:20px;
 }
-#n9 {
+#n9 svg{
 	height:22px;
 }
-#n10 {
+#n10 svg{
 	height:24px;
 }
-#n11 {
+#n11 svg{
 	height:30px;
 }
-#n13 {
+#n13 svg{
 	height:34px;
 }
-#n5, #n6, #n7, #n8, #n9, #n10, #n11, #n13 {
-	width: 200px;
+
+.yarn svg, .needle svg {
+	width: 60%;
+	fill: #ff6666;
 	margin: 0 0 .25rem;
 }
 
