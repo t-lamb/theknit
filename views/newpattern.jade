@@ -6,8 +6,9 @@ block content
         .main
             h1= title
             p Add a knitting pattern to our library and you'll be able to access it from anywhere.
-            a#source-self(href="#") I wrote this pattern
-            a#source-outside(href="#") I found this pattern
+            br
+            a#source-self.source(href="#") I wrote this pattern
+            a#source-outside.source(href="#") I found this pattern
 
             form(name="addpattern", method="post", action="/addpattern")
                 ul
