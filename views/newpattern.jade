@@ -28,10 +28,10 @@ block content
                     li
                         a(href="#").plus 
                             label Choose Yarn
-                            include /images/plus.svg
+                            img(src="/images/plus.svg", alt="+").formtoggle
                         a(href="#").minus.hidden
                             label Choose Yarn
-                            include /images/minus.svg
+                            img(src="/images/minus.svg", alt="-").formtoggle
                         .expand.hidden.radiolist
                             .yarn#y2
                                 input(type="radio", name="yarnweight", id="yarn2", checked=false, value="Lace / 2ply")
@@ -66,10 +66,10 @@ block content
                     li 
                         a(href="#").plus 
                             label Choose Needles
-                            include /images/plus.svg
+                            img(src="/images/plus.svg", alt="+").formtoggle
                         a(href="#").minus.hidden
                             label Choose Needles
-                            include /images/minus.svg
+                            img(src="/images/minus.svg", alt="-").formtoggle
                         .expand.hidden.radiolist
                             .needle#n5
                                 input(type="radio", name="needlesize", id="needle5", checked=false, value="US 5 / 3.75mm")

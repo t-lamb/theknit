@@ -113,7 +113,7 @@ p {
 	max-width: 1200px;
 }
 .button {
-	width: 104%;
+	width: 100%;
 	display: inline-block;
 	margin: 0 0 1rem;
 	padding: 1rem;
@@ -226,15 +226,12 @@ header a{
 	max-width: 100%;
 	padding: 0 0 .5rem;
 }
-.patternfeed a {
-	
-}
-.patternlink:hover {
-	color: #0099ff;
-}
 .patternlink {
 	font-size: 1.25rem;
 	color: #444444;
+}
+.patternlink:hover {
+	color: #0099ff;
 }
 
 /*--------NEW PATTERN---------*/
@@ -244,6 +241,9 @@ form {
 }
 form p{
 	font-size: 1rem;
+}
+.formtoggle {
+	width: 1rem;
 }
 .plus svg, .minus svg {
 	width: 1rem;
