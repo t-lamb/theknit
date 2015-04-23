@@ -367,6 +367,9 @@ input[type=radio]:checked + label{
 	.add-box {
 		display: block;
 		top: 0;
+		left: inherit;
+		right: 0;
+		width: 700px;
 		background-color: transparent;
 		border: none;
 		padding: 0;
@@ -376,6 +379,6 @@ input[type=radio]:checked + label{
 		padding: .6rem 1rem .4rem;
 		margin: .5rem 1rem 0;
 		font-size: 1.25rem;
-		width: 27%;
+		width: 50%;
 	}
 }
