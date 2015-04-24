@@ -32,6 +32,8 @@ function init() {
 			sourceUrl.classList.add('hidden');
 			sourceNameLabel.parentElement.classList.remove('hidden');
 			sourceNameLabel.innerHTML='My Name';
+			sourceSelfFocus.innerHTML='&loz; ';
+			sourceOutsideFocus.innerHTML='&diam; ';
 	});
 
 	var sourceOutside = document.getElementById('source-outside');
@@ -40,10 +42,14 @@ function init() {
 			sourceNameLabel.classList.remove('hidden');
 			sourceNameLabel.parentElement.classList.remove('hidden');
 			sourceNameLabel.innerHTML='Author or Source Name';
+			sourceSelfFocus.innerHTML='&diam; ';
+			sourceOutsideFocus.innerHTML='&loz; ';
 	});
 
 	var sourceUrl = document.getElementById('sourceurl');
 	var sourceNameLabel = document.getElementById('sourcename-label');
+	var sourceSelfFocus = document.getElementById('source-self-focus');
+	var sourceOutsideFocus = document.getElementById('source-outside-focus');
 
 };
 
