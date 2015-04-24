@@ -265,22 +265,21 @@ form {
 	height: 1rem;
 }
 form a{
-	border: 1px solid #cc33ff;
-	color: #cc33ff;
+	border: 2px solid #33ddcc;
+	color: #444444;
 	padding: .75rem 1.5rem;
 }
 form a svg{
 	fill: #cc33ff;
 }
 form a:hover{
-	color: #ff6666;
-	border-color: #ff6666;
+	border-color: #cc33ff;
 }
 form a:hover > svg{
 	fill: #ff6666;
 }
 form ul{
-	padding: 0 0 1rem;
+	padding: 0 0 1.5rem;
 }
 form li{
 	padding: .75rem 1rem;
