@@ -187,16 +187,15 @@ header a{
 	text-align: center;
 	width: 100%;
 	margin: 0 auto;
-	padding: 3rem 1rem 4rem;
+	padding: 4rem 1rem 2rem;
 	background-image: url('../images/yarnscraps1.jpg');
 	background-position: center;
 	background-color: #ebf2f2;
+	color:#ffffff;
 }
-.highlight {
-	color: #000000;
-	background-color: rgba(236, 255, 207, .7);
-	padding: 0 .3rem .2rem;
-	line-height: 1.4;
+.intro svg {
+	fill: rgba(255,255,255,.7);
+	width: 4rem;
 }
 .divider {
 	color: #cc33ff;
@@ -241,6 +240,22 @@ form {
 }
 form p{
 	font-size: 1rem;
+}
+.number {
+	border-radius: 50%;
+	width: 2rem;
+	height: 2rem;
+	background-color: #33ddcc;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	margin: 0 1rem .25rem 0;
+}
+.number p{
+	position:absolute;
+	left: 25%;
+	font-size: 1.5rem;
+	color: #ffffff;
 }
 .formtoggle {
 	width: 1rem;
@@ -385,7 +400,7 @@ input[type=radio]:checked + label > svg {
 		margin: 1rem 1.5%;
 	}
 	.intro {
-		padding: 6rem 1rem 7rem;
+		padding: 6rem 1rem 4rem;
 
 	}
 	.patternfeed li {
