@@ -16,12 +16,14 @@ function init() {
 
 	function show(e){
 		console.log(e.target.parentElement);
+		e.preventDefault();
 		e.target.parentElement.classList.add('hidden');
 		e.target.parentElement.nextElementSibling.classList.remove('hidden');
 		e.target.parentElement.parentElement.querySelector('.expand').classList.remove('hidden');
 	}
 
 	function hide(e){
+		
 		e.target.parentElement.previousElementSibling.classList.remove('hidden');
 		e.target.parentElement.classList.add('hidden');
 		e.target.parentElement.parentElement.querySelector('.expand').classList.add('hidden');
