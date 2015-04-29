@@ -16,7 +16,7 @@ block content
             a#source-outside.source(href="#")
                 span#source-outside-focus &diam; 
                 |I found this pattern
-            form(name="addpattern", method="post", action="/addpattern")
+            form(name="addpattern", method="post", action="/addpattern", enctype="multipart/form-data")
                 ul
                     li.hidden
                         label#sourcename-label My Name
@@ -31,6 +31,9 @@ block content
                     li
                         label Pattern Name
                         input(type="text", placeholder="ex. Lovely Easy Beanie", name="name")
+                    li
+                        label Add a Photo
+                        input(type="file", name="photo")
                     li
                         label Type of Item
                         input(type="text", placeholder="ex. socks", name="type")

@@ -13,6 +13,7 @@
     "mongo": "^0.1.0",
     "mongodb-uri": "^0.9.7",
     "mongoose": "^4.0.1",
+    "multer": "~0.1.6",
     "serve-favicon": "~2.2.0"
   }
 }

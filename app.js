@@ -3,6 +3,7 @@ var app = express();
 var path = require('path');
 var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
+var multer = require('multer');
 
 // add db
 var mongo = require('mongo');
@@ -37,6 +38,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //use locals from base directory
 app.locals.basedir = path.join(__dirname, 'public');
+
+//uploading photos
+app.use(multer({ dest: './uploads/' }));
 
 // Make db accessible to router
 app.use(function(req,res,next){

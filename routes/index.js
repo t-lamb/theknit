@@ -35,11 +35,13 @@ router.get('/newpattern', function(req,res) {
 /* POST to Add Pattern Service */
 router.post('/addpattern', function(req,res) {
     console.log(req.body);
+    console.log(req.files);
     //get form values
     //these rely on "name" attribute 
     //create newPattern object with model from model.js
     var newPattern = new Model.Pattern();
         newPattern.name = req.body.name;
+        newPattern.photo = req.files.path;
         newPattern.type = req.body.type;
         newPattern.needles = {
             size: req.body.needlesize,

@@ -6,6 +6,7 @@ var Schema = mongoose.Schema;
 //Patterns
 var patternSchema = new Schema({
   	name: String,
+  	photo: String,
   	type: String,
   	needles: { 
 		type: {type: String}, 
