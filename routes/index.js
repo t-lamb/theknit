@@ -41,7 +41,7 @@ router.post('/addpattern', function(req,res) {
     //create newPattern object with model from model.js
     var newPattern = new Model.Pattern();
         newPattern.name = req.body.name;
-        newPattern.photo = req.files.path;
+        newPattern.photo = req.files.photo.name;
         newPattern.type = req.body.type;
         newPattern.needles = {
             size: req.body.needlesize,

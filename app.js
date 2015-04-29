@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.locals.basedir = path.join(__dirname, 'public');
 
 //uploading photos
-app.use(multer({ dest: './uploads/' }));
+app.use(multer({ dest: './public/uploads/' }));
 
 // Make db accessible to router
 app.use(function(req,res,next){
