@@ -402,6 +402,12 @@ form .button {
 .patternpage label {
 	font-weight: bold;
 }
+pre{
+    white-space: pre-wrap;
+}
+.instructions {
+	width: 700px;
+}
 /*--------MEDIA QUERIES--------*/
 @media screen and (min-width: 612px){
 	.add-box {

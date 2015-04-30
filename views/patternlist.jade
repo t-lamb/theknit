@@ -1,19 +1,4 @@
 ul.patternlist
-    li  
-        a.patternlink(href="/patterns/5537fe75d3b048ec1b74f57e")
-            img(src="images/chevron.jpg" alt="placeholder image")
-            |Chevron Baby Blanket
-        p by Espace Tricot
-    li  
-        a.patternlink(href="/patterns/553805c9d3b048ec1b74f581") 
-            img(src="images/mistakescarf.jpg" alt="placeholder image")
-            |Easy Mistake Stitch Scarf
-        p by The Purl Bee
-    li  
-        a.patternlink(href="/patterns/553807b5d3b048ec1b74f582")
-            img(src="images/stitchblock.jpeg" alt="placeholder image")
-            |Stitch Block Cowl
-        p by The Purl Bee
     each patternObj, i in patternlist
         li  
             a.patternlink(href="/patterns/"+patternObj.id)
