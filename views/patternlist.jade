@@ -5,12 +5,6 @@ ul.patternlist
             |Chevron Baby Blanket
         p by Espace Tricot
     li  
-        a.patternlink(href="/patterns/55380230d3b048ec1b74f580")
-            img(src="images/kittysocks.jpg" alt="placeholder image")
-            |Kitty Tube Socks
-        
-        p by Ruth Mayer
-    li  
         a.patternlink(href="/patterns/553805c9d3b048ec1b74f581") 
             img(src="images/mistakescarf.jpg" alt="placeholder image")
             |Easy Mistake Stitch Scarf
@@ -23,6 +17,9 @@ ul.patternlist
     each patternObj, i in patternlist
         li  
             a.patternlink(href="/patterns/"+patternObj.id)
-                img(src="images/hat.jpg" alt="placeholder image")
+                if patternObj.photo
+                    img(src="/uploads/"+patternObj.photo)
+                else
+                    img(src="images/hat.jpg" alt="placeholder image")
                 = patternObj.name
             p= 'by ' + patternObj.sourcename
