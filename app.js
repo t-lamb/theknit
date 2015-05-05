@@ -42,25 +42,6 @@ app.locals.basedir = path.join(__dirname, 'public');
 //uploading photos
 app.use(multer({ dest: './public/uploads/' }));
 
-//edit photos
-easyimg.rescrop({
-  src:'kitten.jpg', 
-  dst:'./public/uploads/thumbs/',
-  width:500, 
-  height:500,
-  cropwidth: 128, 
-  cropheight:128,
-  x:0, 
-  y:0
-  }).then(
-  function(image) {
-    console.log('Resized and cropped: ' + image.width + 'x' + 'image.height');
-  },
-  function(err) {
-    console.log(err);
-  }
-);
-
 // Make db accessible to router
 app.use(function(req,res,next){
   req.db = db;
