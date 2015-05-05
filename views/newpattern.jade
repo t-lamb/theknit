@@ -10,10 +10,10 @@ block content
             .number 
                 p 1
             h2 Where is this pattern from?
-            a#source-self.source(href="#") 
+            a#source-self.source(href="") 
                 span#source-self-focus &diam; 
                 |I wrote this pattern
-            a#source-outside.source(href="#")
+            a#source-outside.source(href="")
                 span#source-outside-focus &diam; 
                 |I found this pattern
             form(name="addpattern", method="post", action="/addpattern", enctype="multipart/form-data")
@@ -32,16 +32,19 @@ block content
                         label Pattern Name
                         input(type="text", placeholder="ex. Lovely Easy Beanie", name="name")
                     li
-                        label Add a Photo
-                        input(type="file", name="photo")
+                        input(type="file", name="photo", id="addphoto")
+                        label.upload(for="addphoto")
+                            .uploadsvg
+                                include /images/camera.svg
+                            |Add a Photo 
                     li
                         label Type of Item
                         input(type="text", placeholder="ex. socks", name="type")
                     li
-                        a(href="#").plus 
+                        a(href="").plus 
                             label Choose Yarn
                             img(src="/images/plus.svg", alt="+").formtoggle
-                        a(href="#").minus.hidden
+                        a(href="").minus.hidden
                             label Choose Yarn
                             img(src="/images/minus.svg", alt="-").formtoggle
                         .expand.hidden.radiolist
@@ -76,10 +79,10 @@ block content
                                     include /images/yarn-wide.svg
                                     p Bulky / 12 ply
                     li 
-                        a(href="#").plus 
+                        a(href="").plus 
                             label Choose Needles
                             img(src="/images/plus.svg", alt="+").formtoggle
-                        a(href="#").minus.hidden
+                        a(href="").minus.hidden
                             label Choose Needles
                             img(src="/images/minus.svg", alt="-").formtoggle
                         .expand.hidden.radiolist
