@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var easyimage = require('easyimage');
 
 // location of db model
 var Model = require("../models/model.js");
@@ -64,6 +65,19 @@ router.post('/addpattern', function(req,res) {
             res.redirect("/patterns/"+doc.id);
         }
     });
+    //edit photos
+    var url = 'public/uploads/' + newPattern.photo; 
+    var newurl = 'public/newphotos/' + newPattern.photo; 
+    easyimage.rescrop({
+      src: url, dst: newurl,
+      width:600, height:600,
+      cropwidth: 600, cropheight:600,
+      x:0, y:0
+      }).then(function(image) {
+        console.log('Resized and cropped');
+      }, function(err) {
+        console.log(err);
+      });
 });
 
 /* GET Pattern page. */
