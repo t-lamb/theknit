@@ -16,7 +16,7 @@ block content
             a#source-outside.source(href="#")
                 span#source-outside-focus &diam; 
                 |I found this pattern
-            form(name="addpattern", method="post", action="/addpattern", enctype="multipart/form-data")
+            form.patternform(name="addpattern", method="post", action="/addpattern", enctype="multipart/form-data")
                 ul
                     li.hidden
                         label#sourcename-label My Name
@@ -129,10 +129,8 @@ block content
                 .number 
                     p 3
                 h2 Instructions 
-                br
-                label Step 1
-                //-input(type="text", placeholder="Step 1", name="steptitle")
-                textarea(name="instructions", cols="30", rows="10", placeholder="Type or Paste the knitting instructions here.")
-                a(href=" ")#addstep 
-                    label Add Another Step
-                button.button(type="submit") Save
+                .instructionbox
+                    label.steplabel Step 1
+                    textarea(name="instructions", cols="30", rows="10", placeholder="Type or Paste the knitting instructions here.")
+                a(href="#0")#addstep Add another Step
+                button.button(type="submit") Save Pattern

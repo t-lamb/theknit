@@ -308,9 +308,23 @@ input[type=file] {
 .uploadsvg {
 	display: inline;
 }
+.steplabel {
+	padding: 0 1rem;
+}
+#addstep {
+	border: 2px solid #33ddcc;
+	color: #444444;
+	padding: .75rem 1.5rem;
+	margin: 0 1rem 1.5rem;
+	font-size: 1.25rem;
+	display: inline-block;
+}
+#addstep:hover{
+	border-color: #cc33ff;
+}
 input[type=text], textarea {
 	width: 99%;
-	margin: .5rem 0 0;
+	margin: .5rem 1rem 1rem;
 	padding: .5rem .5rem .7rem;
 	font-family: inherit;
 	font-size: inherit;

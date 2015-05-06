@@ -22,4 +22,7 @@ block content
                 
             label Instructions
             .instructions
-                pre=pattern.instructions
+                each step, index in pattern.instructions
+                p Step
+                    =index + 1
+                pre=step

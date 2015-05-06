@@ -57,9 +57,12 @@ function init() {
 	//Dynamic form
 	var counter = 1;
 	var addStep = document.getElementById('addstep')
-		addStep.addEventListener('click',function(){
-			var newdiv = document.createElement('div');
-			newdiv.innerHTML = "<label>Step" + (counter + 1) + "</label><textarea name='instrucitons' cols='30' rows='10'></textarea>" 
+		addStep.addEventListener('click',function(e){
+			e.preventDefault();
+			var newDiv = document.createElement('div'),
+			form = document.querySelector('.patternform');
+			newDiv.innerHTML = "<label class='steplabel'>Step" + (counter + 1) + "</label><textarea name='instrucitons' cols='30' rows='10'></textarea>"; 
+			form.insertBefore(newDiv, addStep);
 			counter++;
 	});
 };
