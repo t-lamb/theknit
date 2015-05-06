@@ -10,10 +10,10 @@ block content
             .number 
                 p 1
             h2 Where is this pattern from?
-            a#source-self.source(href="") 
+            a#source-self.source(href="#") 
                 span#source-self-focus &diam; 
                 |I wrote this pattern
-            a#source-outside.source(href="")
+            a#source-outside.source(href="#")
                 span#source-outside-focus &diam; 
                 |I found this pattern
             form(name="addpattern", method="post", action="/addpattern", enctype="multipart/form-data")
@@ -34,9 +34,9 @@ block content
                     li
                         input(type="file", name="photo", id="addphoto")
                         label.upload(for="addphoto")
+                            |Add a Photo 
                             .uploadsvg
                                 include /images/camera.svg
-                            |Add a Photo 
                     li
                         label Type of Item
                         input(type="text", placeholder="ex. socks", name="type")
@@ -129,5 +129,10 @@ block content
                 .number 
                     p 3
                 h2 Instructions 
+                br
+                label Step 1
+                //-input(type="text", placeholder="Step 1", name="steptitle")
                 textarea(name="instructions", cols="30", rows="10", placeholder="Type or Paste the knitting instructions here.")
+                a(href=" ")#addstep 
+                    label Add Another Step
                 button.button(type="submit") Save

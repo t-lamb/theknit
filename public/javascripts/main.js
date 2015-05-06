@@ -29,6 +29,7 @@ function init() {
 		e.target.parentElement.parentElement.querySelector('.expand').classList.add('hidden');
 	}
 
+	//Source toggle
 	var sourceSelf = document.getElementById('source-self');
 		sourceSelf.addEventListener('click',function(){
 			sourceUrl.classList.add('hidden');
@@ -53,6 +54,14 @@ function init() {
 	var sourceSelfFocus = document.getElementById('source-self-focus');
 	var sourceOutsideFocus = document.getElementById('source-outside-focus');
 
+	//Dynamic form
+	var counter = 1;
+	var addStep = document.getElementById('addstep')
+		addStep.addEventListener('click',function(){
+			var newdiv = document.createElement('div');
+			newdiv.innerHTML = "<label>Step" + (counter + 1) + "</label><textarea name='instrucitons' cols='30' rows='10'></textarea>" 
+			counter++;
+	});
 };
 
 window.addEventListener('load', init);
