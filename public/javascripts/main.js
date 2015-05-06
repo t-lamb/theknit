@@ -57,9 +57,16 @@ function init() {
 	//Dynamic form
 	var counter = 1;
 	var addStep = document.getElementById('addstep')
-		addStep.addEventListener('click',function(){
-			var newdiv = document.createElement('div');
-			newdiv.innerHTML = "<label>Step" + (counter + 1) + "</label><textarea name='instrucitons' cols='30' rows='10'></textarea>" 
+		addStep.addEventListener('click',function(e){
+            e.preventDefault();
+			var newdiv = document.createElement('div'),
+                form = document.querySelector('.patternForm');
+
+			newdiv.innerHTML = "<label>Step" + (counter + 1) + "</label><textarea name='instructions' cols='30' rows='10'></textarea>"; 
+            console.log(e.target);
+            form.insertBefore(newdiv, addStep);
+
+
 			counter++;
 	});
 };
