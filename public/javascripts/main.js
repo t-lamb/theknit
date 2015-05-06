@@ -61,7 +61,7 @@ function init() {
 			e.preventDefault();
 			var newDiv = document.createElement('div'),
 			form = document.querySelector('.patternform');
-			newDiv.innerHTML = "<label class='steplabel'>Step" + (counter + 1) + "</label><textarea name='instrucitons' cols='30' rows='10'></textarea>"; 
+			newDiv.innerHTML = "<label class='steplabel'>Step" + (counter + 1) + "</label><textarea name='instructions' cols='30' rows='10'></textarea>"; 
 			form.insertBefore(newDiv, addStep);
 			counter++;
 	});

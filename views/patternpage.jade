@@ -20,9 +20,10 @@ block content
                     label Yarn Weight:
                     =pattern.yarnweight+" ply"
                 
-            label Instructions
+            label Instructions:
             .instructions
-                each step, index in pattern.instructions
-                p Step
+            each val, index in pattern.instructions
+                p.steptitle Step 
                     =index + 1
-                pre=step
+                pre=val
+                

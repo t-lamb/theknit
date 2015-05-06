@@ -426,13 +426,17 @@ form .button {
 	font-size: 1.25rem;
 }
 .patternpage a {
+	color: #444444;
+}
+.patternpage a:hover {
 	color: #0099ff;
 }
 .patternpage ul {
 	padding: 1rem 0 1rem;
 }
 .patternpage label {
-	font-weight: bold;
+
+	color: #9933ff;
 }
 .patternpage img {
 	max-width: 100%;
@@ -440,6 +444,12 @@ form .button {
 }
 pre{
     white-space: pre-wrap;
+    padding: 0 0 1rem;
+}
+.steptitle {
+	font-weight: bold;
+	color: #33ddcc;
+	padding: .5rem 0;
 }
 .instructions {
 	width: 700px;
