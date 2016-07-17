@@ -5,25 +5,28 @@ block content
     .container
         .main.patternpage
             h1= pattern.name
-            p By 
+            p.attrib by 
                 a(href=pattern.sourceurl)= pattern.sourcename 
             if pattern.photo
                 img(src="/newphotos/"+pattern.photo)
             ul                    
                 li
                     label Item:
+                    br
                     =pattern.type
                 li
                     label Needles:
+                    br
                     =pattern.needles.size +", "+ pattern.needles.type
                 li  
                     label Yarn Weight:
+                    br
                     =pattern.yarnweight+" ply"
                 
             label Instructions:
             .instructions
             each val, index in pattern.instructions
                 p.steptitle Step 
-                    =index + 1
+                    =index + 1 + ':'
                 pre=val
                 

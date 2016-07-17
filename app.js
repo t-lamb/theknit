@@ -11,7 +11,10 @@ var mongo = require('mongo');
 var mongoose = require('mongoose');
 var mongodbUri = require('mongodb-uri');
 
+//local
 var url = config.mongodb_uri;
+//prod
+// var url = process.env.MONGOLAB_URI
 var mongoUrl = mongodbUri.formatMongoose(url);
 
 mongoose.connect(mongoUrl);
