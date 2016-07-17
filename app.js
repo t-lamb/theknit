@@ -4,13 +4,14 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 var multer = require('multer');
+var config = require('./config.js');
 
 // add db
 var mongo = require('mongo');
 var mongoose = require('mongoose');
 var mongodbUri = require('mongodb-uri');
 
-var url = "mongodb://heroku_app36019089:e1gm3it25dp8vfm1qr7a4gvul9@ds061651.mongolab.com:61651/heroku_app36019089"
+var url = config.mongodb_uri;
 var mongoUrl = mongodbUri.formatMongoose(url);
 
 mongoose.connect(mongoUrl);
