@@ -4,7 +4,7 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 var multer = require('multer');
-var config = require('./config.js');
+//var config = require('./config.js');
 
 // add db
 var mongo = require('mongo');
