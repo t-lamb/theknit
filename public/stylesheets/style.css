@@ -121,6 +121,7 @@ p {
 	border: 2px solid #cc33ff;
 	font-size: 1.25rem;
 	text-align: center;
+	font-family: 'Muli', sans-serif;
 }
 .button:hover {
 	background-color: #cc33ff;
@@ -273,7 +274,7 @@ form a svg{
 	fill: #cc33ff;
 }
 form a:hover{
-	border-color: #cc33ff;
+	border-color: #ff6666;
 }
 form a:hover > svg{
 	fill: #ff6666;
@@ -295,7 +296,7 @@ input[type=file] {
     display: inline-block;
     padding: .75rem 1.5rem;
     cursor: pointer;
-    border: 2px dashed #33ddcc;
+    border: 2px dashed #cc33ff;
 }
 .upload svg {
 	width: 1.5rem;
@@ -318,7 +319,7 @@ input[type=file] {
 	display: inline-block;
 }
 #addstep:hover{
-	border-color: #cc33ff;
+	border-color: #ff6666;
 }
 input[type=text], textarea {
 	width: 99%;
@@ -341,6 +342,7 @@ input[type=radio] {
 	color: #aaaaaa;
 	padding: .5rem 1rem .5rem 3rem;
 	display: block;
+	cursor: pointer;
 }
 .source:focus {
 	color: #cc33ff;
